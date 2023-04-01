@@ -20,3 +20,4 @@
 #12 git merge branchName
 #13 gitk
 #14 git log
+GITHUB_BRANCH
