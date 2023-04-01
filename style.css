@@ -1,4 +1,125 @@
+@import url(https://fonts.googleapis.com/css2?family=Lato:wght@100;200;300;400;500;600;800;900&display=swap);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+}
+
+/* ------------- Header -------------- */
+
 header {
     position: relative;
     height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.bg-overlay img {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.bg-overlay::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(18, 131, 218, 0.85);
+    z-index: 3;
+}
+
+.navbar {
+    position: absolute;
+    z-index: 1111;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 1.5rem 0;
+}
+
+.navbar-collapse {
+    flex-grow: 0;
+}
+
+.btn-white {
+    border-color: #fff;
+    color: #fff;
+    font-weight: 500;
+}
+
+.btn-white:hover {
+    background: #fff;
+}
+
+.navbar-brand {
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 1.2;
+}
+
+.navbar-brand:hover {
+    color: #fff;
+}
+
+.navbar .nav-link.active,
+.navbar .nav-link.show {
+    color: #fff !important;
+}
+
+.navbar .nav-link {
+    font-weight: 600;
+    padding: 8px 13.6px !important;
+    color: #ffffff80;
+}
+
+.navbar .nav-link:hover {
+    color: hsla(0, 0%, 100%, 0.75);
+}
+
+.intro {
+    position: relative;
+    z-index: 100;
+}
+
+/* ------------- Header -------------- */
+
+/* ------------- Media Query-------------- */
+@media (max-width: 991px) {
+    .navbar {
+        background: rgba(0, 0, 0, 0.65);
+    }
+
+    .navbar-toggler {
+        border-color: hsla(0, 0%, 100%, 0.1);
+    }
+
+    .navbar-toggler:focus {
+        box-shadow: none;
+    }
+
+    .navbar-toggler-icon {
+        background-image: url("./image/navbar-toggle.svg");
+    }
+
+    .navbar .nav-link {
+        padding-left: 0 !important;
+    }
+}
+
+/* ------------- Media Query-------------- */
