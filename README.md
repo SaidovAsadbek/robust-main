@@ -17,4 +17,6 @@
 #9 git branch
 #10 git branch new branch name
 #11 git checkout branchName
-
+#12 git merge branchName
+#13 gitk
+#14 git log
